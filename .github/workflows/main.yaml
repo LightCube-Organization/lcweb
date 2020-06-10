@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - feature/test
+name: Build and Deploy
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: List output files
+        run: ls
+
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          LOCAL_DIR: dist
+          REMOTE_DIR: lightcube/
+          ARGS: --delete
+          # --delete arg will delete files on the server if you've deleted them in git
