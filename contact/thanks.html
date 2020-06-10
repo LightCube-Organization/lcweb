@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154666427-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154666427-2');
+    </script>
+    <meta name="theme-color" content="#FFF">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@LightCube_c">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="lightcube.cf">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="/images/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" href="/image/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/image/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/image/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/image/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/image/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/image/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-touch-icon-180x180.png" />
+    <meta property="og:title" content="LCCreators Official Website">
+    <meta name="description" content="LCCreatorsでは、主にゲームの制作やウェブサイトの制作を行っております。LightCubeなどの教育機関向けゲームを開発中です。">
+    <meta property="og:description" content="LCCreatorsでは、主にゲームの制作やウェブサイトの制作を行っております。LightCubeなどの教育機関向けゲームを開発中です。">
+    <meta property="og:url" content="https://www.lightcube.cf">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Thanks | LCCreators</title>
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/x-icon">
+    <link href="/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hooper@0.2.1/dist/hooper.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hooper@0.2.1/dist/hooper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <header id="headera">
+            <menu-btn :class="{ menu_btn: true, open_: menuFlag }" @click.native="menuToggle">
+            </menu-btn>
+        </header>
+        <transition>
+            <div id="sp_menu" v-show="menuFlag" :style="{ marginTop: headH }">
+                <div class="menu_wrap">
+                    <ul>
+                        <li><a href="/"><span class="material-icons" style="font-size: 21px;">home</span>&emsp;ホーム</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="material-icons"
+                                    style="font-size: 21px;">inbox</span>&emsp;プロジェクト</a>
+                            <ul>
+                                <li><a href="/projects/lightcube"><span class="material-icons"
+                                            style="font-size: 21px;">chevron_right</span>&emsp;LightCube</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://blog.lightcube.cf"><span class="material-icons"
+                                    style="font-size: 21px;">description</span>&emsp;ブログ</a></li>
+                        <li><a href="/contact/"><span class="material-icons"
+                                    style="font-size: 21px;">mail</span>&emsp;お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </transition>
+    </div>
+    <div>
+        <nav class="pc-nav">
+            <div class="logo">
+                <h1><a href="/"><img src="https://img.vnic.cf/lcweb/logo.png" alt="サイトロゴ"></a></h1>
+            </div>
+            <ul class="menu">
+                <li class="menu__none"><a href="/">ホーム</a></li>
+                <li class="menu__single">
+                    <a href="#">プロジェクト&emsp;<span class="material-icons" style="font-size: 21px;">expand_more</span></a>
+                    <ul class="menu__second-level">
+                        <li><a href="/projects/lightcube">LightCube</a></li>
+                    </ul>
+                </li>
+                <li class="menu__none"><a href="https://blog.lightcube.cf">ブログ</a></li>
+                <li class="menu__none"><a href="/contact/">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="imgsl2">
+        <article id="visual">
+            <picture>
+                <source type="image/webp" srcset="https://img.vnic.cf/lcweb/bg/bg5.webp">
+                </source>
+                <img src="https://img.vnic.cf/lcweb/bg/bg5.png" style="width:100%">
+            </picture>
+        </article>
+    </div>
+    <div class="body">
+        <article id="intro">
+            <h1>お問い合わせありがとうございました。</h1>
+        </article>
+    </div>
+    <script>
+        //menuボタンコンポーネント
+        const menuBtnComp = {
+            template: `
+    <div>
+        <span class="menu_trigger">
+            <span></span><span></span><span></span>
+        </span>
+    </div>
+`
+        }
+
+        //root
+        const app = new Vue({
+            el: '#app',
+            data: {
+                menuFlag: false,
+                headH: "0px",
+            },
+            methods: {
+                menuToggle: function () {
+                    //menuFlag切り替え
+                    this.menuFlag = !this.menuFlag;
+                }
+            },
+            mounted: function () {
+                //headerの高さ取得
+                let h = document.getElementById("headera").offsetHeight;
+                this.headH = h + "px";
+            },
+            components: {
+                'menu-btn': menuBtnComp,
+            }
+        });
+
+        new Vue({
+            el: "#slide",
+            components: {
+                Hooper: window.Hooper.Hooper,
+                Slide: window.Hooper.Slide,
+                HooperNavigation: window.Hooper.Navigation,
+            }
+        })
+    </script>
+</body>
+<footer>
+    　<div class="foot-wrap">
+
+        　<div class="menu-left">
+            　　<h3>Link</h3>
+            　　<ul class="foot-left">
+                　　　<li><a href="https://github.com/lightcube-c">Github</a></li>
+                　　　<li><a href="https://twitter.com/LightCube_c">Twitter</a></li>
+                　　　<li><a href="#">Youtube</a></li>
+                　　</ul>
+            　</div>
+
+        　<div class="menu-center">
+            　　<h3>About Us</h3>
+            　　<ul class="foot-center">
+                　　　<li><a href="/about/">私たちについて</a></li>
+                　　　<li><a href="/privacy/">プライバシーポリシー</a></li>
+                　　　<li><a href="/agreement/">利用規約</a></li>
+                　　</ul>
+            　</div>
+
+        　<div class="menu-right">
+            　　<h3>Projects</h3>
+            　　<ul class="foot-right">
+                　　　<li><a href="/projects/lightcube">LightCube</a></li>
+                　　　<li><a href="#">Coming Soon...</a></li>
+                　　　<li><a href="#">Coming Soon...</a></li>
+                　　</ul>
+            　</div>
+
+        　　<small class="cmark">CopyRight &copy; 2020 <a href="/">LCCreators</a> All Rights Reserved.</small>
+
+        　</div>
+</footer>
+
+</html>
