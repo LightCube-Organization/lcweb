@@ -16,6 +16,6 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ftps://ftp.accessto.net:21/lightcube/
+          ftp-server: ftp://ftp.accessto.net:21/lightcube/
           ftp-username: accessto
           ftp-password: ${{ secrets.FTP_PASSWORD }}
