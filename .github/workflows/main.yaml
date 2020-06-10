@@ -15,11 +15,8 @@ jobs:
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: /
-          REMOTE_DIR: /home/accessto/lightcube/
-          ARGS: --delete
-          # --delete arg will delete files on the server if you've deleted them in git
+        with:
+          ftp-server: ftp://ftp.accessto.net/
+          ftp-username: accessto
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          git-ftp-args: --remote-root /home/accessto/lightcube/
