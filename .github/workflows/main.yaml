@@ -16,7 +16,6 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ftp://ftp.accessto.net/
+          ftp-server: ftps://ftp.accessto.net/home/accessto/lightcube/
           ftp-username: accessto
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          git-ftp-args: --remote-root /home/accessto/lightcube/
