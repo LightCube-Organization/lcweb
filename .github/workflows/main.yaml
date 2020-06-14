@@ -1,21 +1,18 @@
-on:
-  push:
-    branches:
-      - master
-name: Build and Deploy
+on: push
+name: Publish Website over FTPS
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+    - uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
 
-      - name: List output files
-        run: ls
-
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
-        with:
-          ftp-server: ftp://ftp.accessto.net:21/lightcube/
-          ftp-username: accessto
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ftps://ftp.accessto.net:21/
+        ftp-username: accessto
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        git-ftp-args: --insecure
