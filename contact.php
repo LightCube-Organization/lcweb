@@ -8,8 +8,9 @@
 
 //reCAPTCHA v3の処理
 if(isset($_POST['recaptchaResponse']) && !empty($_POST['recaptchaResponse'])){
-    $secret = '6LexD_wUAAAAAAGVEuWUkCVUE18Ei-3zbPVA13nv';
-    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['recaptchaResponse']);
+    $secret = 'NkxleERfd1VBQUFBQUFHVkV1V1VrQ1ZVRTE4RWktM3piUFZBMTNudg==';
+    $decret = base64_decode($secret);
+    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$decret.'&response='.$_POST['recaptchaResponse']);
     $reCAPTCHA = json_decode($verifyResponse);
         if (!$reCAPTCHA->success){
         echo "送信エラーになりました。ブラウザの戻るボタンを押して、再度ご送信お願いします。";
