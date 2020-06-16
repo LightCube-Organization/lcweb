@@ -4,15 +4,6 @@
     <title>Contact | LCCreators</title>
     <meta charset="utf-8" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/x-icon">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LexD_wUAAAAABydqUm5Us8z8wNO7Y5npEE_OvRM"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LexD_wUAAAAABydqUm5Us8z8wNO7Y5npEE_OvRM', { action: 'homepage' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-        });
-    </script>
 </header>
 <!--#include virtual="/partials/header.html" -->
 
@@ -31,6 +22,16 @@
         <article id="intro">
             <h1>お問い合わせ</h1>
             <form action="/contact.php" method="post">
+                <script
+                    src="https://www.google.com/recaptcha/api.js?render=6LexD_wUAAAAABydqUm5Us8z8wNO7Y5npEE_OvRM"></script>
+                <script>
+                    grecaptcha.ready(function () {
+                        grecaptcha.execute('6LexD_wUAAAAABydqUm5Us8z8wNO7Y5npEE_OvRM', { action: 'homepage' }).then(function (token) {
+                            var recaptchaResponse = document.getElementById('recaptchaResponse');
+                            recaptchaResponse.value = token;
+                        });
+                    });
+                </script>
                 <input type="hidden" name="recaptchaResponse" id="recaptchaResponse">
                 <div class="cp_iptxt">
                     <input type="text" placeholder="お名前" name="name" required>
