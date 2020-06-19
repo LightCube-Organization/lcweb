@@ -9,7 +9,7 @@
 <body>
     <!--#include virtual="/partials/nav.html" -->
     <div id="slide">
-        <hooper :auto-play="false" :play-speed="5000" :infiniteScroll="true" style="height: 640px;">
+        <hooper :auto-play="true" :play-speed="10000" :infiniteScroll="true" style="height: 640px;">
             <slide class="sld1">
                 <div class="sl-content">
                     <img src="/images/logo/logo_b.png"><br>
@@ -26,7 +26,7 @@
                     <div class="container"><a href="/projects/lightos" class="btn-open">さらに詳しく</a></div>
                 </div>
             </slide>
-            <hooper-navigation slot="hooper-addons"></hooper-navigation>
+            <hooper-pagination slot="hooper-addons"></hooper-pagination>
         </hooper>
     </div>
     <!--#include virtual="/partials/vue.html" -->
