@@ -474,6 +474,12 @@ nav {
   background-image: url("https://img.vnic.cf/lcweb/bg/bg1.png");
 }
 
+.sld2 {
+  position: relative;
+  z-index: 2;
+  background-image: url("https://img.vnic.cf/lcweb/bg/bg7.png");
+}
+
 .sl-content {
   position: absolute;
   z-index: 2;
@@ -647,6 +653,10 @@ footer {
   padding: 5px 10px;
 }
 
+#intro blockquote {
+
+}
+
 .bg {
   object-fit: cover;
   width: 100%;
@@ -660,6 +670,11 @@ footer {
 .imgsl2 {
   height: 640px;
   background-image: url("https://img.vnic.cf/lcweb/bg/bg3.png");
+}
+
+.imgsl3 {
+  height: 640px;
+  background-image: url("https://img.vnic.cf/lcweb/bg/bg7.png");
 }
 
 .imgsl img {
