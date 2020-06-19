@@ -654,7 +654,10 @@ footer {
 }
 
 #intro blockquote {
-
+  background-color: #575757;
+  color: #fff;
+  padding: 10px 10px;
+  justify-content: center
 }
 
 .bg {
