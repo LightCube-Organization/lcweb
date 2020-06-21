@@ -34,16 +34,16 @@
             </ul>
             <h1>ダウンロード</h1>
             <div class="cp_ipselect cp_sl01">
-                <select name="source" v-model="selectedSource" v-on:change="downloadFrom">
-                    <option v-for="source in sources" v-bind:value="source.id">
-                        {{ source.name }}
-                    </option>
+                <select>
+                    <option value="select">選択してください...</option>
+                    <option value="mega">MEGA</option>
+                    <option value="japan">日本鯖</option>
                 </select>
             </div>
-            <section id="mega" class="hidden">
+            <section id="mega">
                 <a href="https://mega.nz/folder/0X5HRSwL#hfO-c_oO5KzJXrAh9oY4Pg" class="btn-border">ダウンロード</a>
             </section>
-            <section id="japan" class="hidden">
+            <section id="japan">
                 <a href="https://archive.lccs.gq/lightos/" class="btn-border">ダウンロード（Japan）</a>
             </section>
         </article>
