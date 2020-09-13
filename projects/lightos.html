@@ -9,12 +9,14 @@
 
         gtag('config', 'UA-154666427-2');
     </script>
-    <title>Contact | LCCreators</title>
+    <title>LightOS | LCCreators</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="/css/uikit.min.css">
     <link rel="stylesheet" href="/css/themify-icons.css">
     <script src="/js/uikit.min.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/select.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon//favicon-16x16.png">
@@ -46,11 +48,12 @@
                             <a><i class="uk-margin-small-right ti-package"></i>Products</a>
                             <ul class="uk-nav-sub">
                                 <li><a href="/products/lightcube">LightCube</a></li>
+                                <li class="uk-active"><a href="/products/lightos">LightOS</a></li>
                             </ul>
                         </li>
                         <li><a href="https://blog.lccs.tech"><i class="uk-margin-small-right ti-write"></i>Blog</a></li>
                         <li><a href="/about"><i class="uk-margin-small-right ti-user"></i>About Us</a></li>
-                        <li class="uk-active"><a href="/contact"><i class="uk-margin-small-right ti-email"></i>Contact</a>
+                        <li><a href="/contact"><i class="uk-margin-small-right ti-email"></i>Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -63,12 +66,13 @@
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="/projects/lightcube">LightCube</a></li>
+                                <li class="uk-active"><a href="/projects/lightos">LightOS</a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="https://blog.lccs.tech">Blog</a></li>
-                    <li class="uk-active"><a href="/contact">Contact</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -77,65 +81,43 @@
         <!-- Contact -->
         <div class="uk-light uk-background-secondary">
             <div class="uk-container uk-padding-large">
-                <form action="/contact.php" method="post">
-                    <script
-                        src="https://www.google.com/recaptcha/api.js?render=6LexIpUUAAAAAPgUxQ91WLWNxccF8PjwOoi9IVgi"></script>
-                    <script>
-                        grecaptcha.ready(function () {
-                            grecaptcha.execute('6LexIpUUAAAAAPgUxQ91WLWNxccF8PjwOoi9IVgi', { action: 'homepage' }).then(function (token) {
-                                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                                recaptchaResponse.value = token;
-                            });
-                        });
-                    </script>
-                    <input type="hidden" name="recaptchaResponse" id="recaptchaResponse">
-                    <legend class="uk-legend">Contact</legend>
-                    <p>LCCreatorsに何か質問がある場合は、以下のフォームからどうぞ。</p>
-
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="name">名前</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" name="name" id="name" type="text" placeholder="John Doe" required>
-                        </div>
-                    </div>
-
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="email">メールアドレス</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" name="mail" id="email" type="text" placeholder="abc@example.com" required>
-                        </div>
-                    </div>
-
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="form-stacked-select">お問い合わせの種類</label>
-                        <div class="uk-form-controls">
-                            <select class="uk-select" name="type" id="form-stacked-select" required>
-                                <option>不具合報告</option>
-                                <option>提案</option>
-                                <option>応募</option>
-                                <option>その他</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="title">題名</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" name="title" id="title" type="text" placeholder="Title" required>
-                        </div>
-                    </div>
-
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="message">メッセージ</label>
-                        <div class="uk-form-controls">
-                            <textarea class="uk-textarea" rows="3" name="message" id="message" placeholder="Message" required></textarea>
-                        </div>
-                    </div>
-                    <input type="hidden" id="token" name="token" value="7942368" />
-                    <button type="submit" class="uk-button uk-button-default">送信</button>
-
+                <img src="/img/main/lightos.png">
+                <blockquote>
+                    <p>Independently developed? That's not true.</p>
+                </blockquote>
+                <h2>LightOS</h2>
+                <p>LightOSは、趣味で開発された軽量・シンプル、そして少しのWindows風味を含んだUbuntuカスタマイズOSです。
+                </p>
+                <h3>概要</h3>
+                <p>Ubuntuをベースとし、xfce4を使用したシンプルなOSです。あなたの手で自由にカスタマイズして、自分好みのUIを作りましょう。</p>
+                <h3>注意</h3>
+                <ul>
+                    <li>基本パッケージは全て入っていますが、オフィスやコードエディタなどはプリインストールされていません。</li>
+                    <li>まだ開発中なのでバージョン管理はしていません。</li>
+                    <li>これによりPCがいかなる状態になろうと、当団体および開発者は保証いたしません。</li>
+                </ul>
+                <h3>ダウンロード</h3>
+                <form name="selmirror">
+                    <select class="uk-select" name="mirror" onchange="selectboxChange();">
+                        <option value="select">ミラーを選択...</option>
+                        <option value="direct">Direct</option>
+                        <option value="mega">MEGA</option>
+                    </select>
                 </form>
+                    <section id="direct" class="direct uk-margin-small-top uk-hidden">
+                        <h3>直接ダウンロード</h3>
+                        <p>短時間のうちに繰り返しダウンロードするとサーバーに負荷がかかります。</p>
+                        <a class="uk-button uk-button-default" href="https://archive.lccs.gq/lightos/">ダウンロード</a>
+                    </section>
+
+                    <section id="mega" class="mega uk-margin-small-top uk-hidden">
+                        <h3>MEGAからダウンロード</h3>
+                        <p>MEGAの方は更新頻度が少ないためおすすめしません。</p>
+                            <a class="uk-button uk-button-default"
+                                href="https://mega.nz/folder/0X5HRSwL#hfO-c_oO5KzJXrAh9oY4Pg">ダウンロード</a>
+                    </section>
             </div>
+        </div>
     </main>
 
 
