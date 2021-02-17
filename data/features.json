@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Creative",
+      "description": "今までになかった新しいアイデアを多く取り入れ、オリジナル性を追求していきます。",
+      "icon": "bi-pencil-square"
+    },
+    {
+      "title": "Simple",
+      "description": "ユーザーがアプリ・サービスを使用した時に使いやすいと思えるようなUIを制作しています。",
+      "icon": "bi-brush"
+    },
+    {
+      "title": "High Quality",
+      "description": "十分な時間を確保し、クリエイターが力を全て発揮できるような環境を整えています。",
+      "icon": "bi-graph-up"
+    }
+  ]

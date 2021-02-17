@@ -1,0 +1,41 @@
+<form action="/contact.php" method="post">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LexIpUUAAAAAPgUxQ91WLWNxccF8PjwOoi9IVgi"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LexIpUUAAAAAPgUxQ91WLWNxccF8PjwOoi9IVgi', { action: 'homepage' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+    <input type="hidden" name="recaptchaResponse" id="recaptchaResponse">
+    <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="John Doe">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" name="mail" id="email" placeholder="abc@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="title" class="form-label">Your Name</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+    </div>
+    <div class="mb-3">
+        <label for="select" class="form-label">Type of inquiry</label>
+        <select name="type" class="form-select" aria-label="Contact Type" id="select">
+            <option selected>Select</option>
+            <option value="1">不具合報告</option>
+            <option value="2">提案</option>
+            <option value="3">応募</option>
+            <option value="4">その他</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="3" placeholder="Message"></textarea>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" class="h-100">
+
+<head>
+    {{- partial "head.html" . -}}
+    <style>
+        main {
+            padding: 100px 0 0;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    {{- partial "header.html" . -}}
+    <main class="flex-shrink-0">
+    {{- partial "slide.html" . -}}
+    {{- partial "strip.html" . -}}
+    </main>
+    {{- partial "footer.html" . -}}
+</body>
+
+</html>
