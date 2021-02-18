@@ -2,7 +2,7 @@ baseURL = "https://www.lccs.ml"
 languageCode = "jp"
 title = "LCCreators"
 theme = "luxen"
-
+googleAnalytics = "G-ME0X82ZRX3"
 [menu]
 
   [[menu.main]]
