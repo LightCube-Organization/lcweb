@@ -39,3 +39,6 @@
     display:block;
     margin-top: .5em;
 }
+input, select, textarea {
+    -webkit-appearance: none;
+}
