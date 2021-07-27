@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja" class="h-100">
+<html lang="ja">
 
 <head>
     {{- partial "head.html" . -}}
-    <style>
-        main {
-            padding: 100px 0 0;
-        }
-    </style>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="flex flex-col h-screen justify-between">
     {{- partial "header.html" . -}}
-    <main class="flex-shrink-0">
+    <main class="mb-auto">
     {{- partial "slide.html" . -}}
     {{- partial "strip.html" . -}}
     </main>

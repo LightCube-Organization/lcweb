@@ -1,8 +1,9 @@
 {{ define "main" }}
-<div class="container mt-5">
-    <h1>{{.Title}}</h1>
+<div class="container mx-auto my-10 max-w-6xl px-4">
+    <a href="/projects/" class="text-lg py-4 block">< プロジェクト一覧に戻る</a>
+    <h1 class="text-4xl">{{.Title}}</h1>
     {{ if .Params.img }}
-    <img class="img-fluid my-4" src="{{ .Params.img | absURL }}">
+    <img class="my-4" src="{{ .Params.img | absURL }}">
     {{ end }}
     <div class="content">{{.Content}}</div>
 </div>

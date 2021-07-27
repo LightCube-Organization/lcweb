@@ -1,19 +1,22 @@
-<nav class="navbar navbar-expand-lg  fixed-top navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img src="/img/logo.svg"height="60"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                {{ range .Site.Menus.main }}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
+<nav class="text-sm uppercase flex items-center justify-between flex-wrap p-6 border-b-2">
+        <a href="/">
+            <img src="/img/logo.svg" class="flex items-center flex-shrink-0 text-2xl mr-6 h-16" />
+        </a>
+        <div class="block lg:hidden">
+            <div id="hamburgerbtn" class="flex cursor-pointer items-center w-14 h-10 py-2 rounded type-1">
+                <span class="top bg-black"></span>
+                <span class="middle bg-black"></span>
+                <span class="bottom bg-black"></span>
+            </div>
         </div>
-    </div>
+        <div class="hidden w-full ml-6 block flex-grow lg:flex lg:flex-row lg:items-center lg:w-auto" id="navbarColor03">
+            <div class="text-md lg:flex-grow lg:ml-auto"></div>
+            <div class="text-md mt-3 lg:m-0">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="duration-200 text-gray-300 hover:text-black block mt-4 lg:inline-block lg:mt-0 mr-8">
+                    {{ .Name }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
 </nav>

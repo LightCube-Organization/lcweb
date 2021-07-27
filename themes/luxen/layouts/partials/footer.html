@@ -1,5 +1,16 @@
 <footer class="footer mt-auto py-3 bg-white">
-    <div class="container">
-        <span class="text-muted">&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}" class="hover:text-gray-500">{{ .Site.Title }}</a>. Made with <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://bootswatch.com/lux/">Lux</a>.</span>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        });
+    </script>
+    <div class="container mx-auto max-w-7xl text-gray-400">
+        <span class="px-3">&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}" class="hover:text-black duration-200">{{ .Site.Title }}</a>.</span>
     </div>
 </footer>

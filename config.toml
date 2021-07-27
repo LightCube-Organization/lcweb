@@ -34,3 +34,6 @@ googleAnalytics = "G-ME0X82ZRX3"
     name = "Contact"
     url = "/contact/"
     weight = 5
+
+[build]
+  writeStats = true

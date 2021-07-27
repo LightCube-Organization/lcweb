@@ -1,7 +1,7 @@
-<div class="card">
-    <img src="{{ .Params.img | absURL }}" class="card-img-top mt-3" alt="{{ .Title }}">
-    <div class="card-body">
-      <h3 class="card-title">{{ .Title }}</h5>
-      <a href="{{ .Permalink }}" class="mt-4 btn btn-primary">Learn more</a>
-    </div>
+<div>
+  <img src="{{ .Params.img | absURL }}" class="my-3" alt="{{ .Title }}">
+  <div>
+    <h3 class="text-2xl">{{ .Title }}</h5>
+    <a href="{{ .Permalink }}" class="inline-block py-2 px-4 duration-200 mt-4 border-2 border-black hover:bg-black hover:text-white">Learn more</a>
   </div>
+</div>

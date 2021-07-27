@@ -1,17 +1,19 @@
-<div class="col">
-    <div class="card">
-        <div class="card-body">
-            <div class="d-flex">
-                <img class="rounded-circle w-25 h-25" src="{{ .Get 0 }}">
-                <h5 class="mt-4 ms-3 card-title">{{ .Get 1 }}</h5>
+<div class="flex flex-col">
+    <div class="relative flex flex-col border-2">
+        <div class="p-4">
+            <div class="flex m-0">
+                <img class="rounded-full w-20 h-20" src="{{ .Get 0 }}">
+                <h5 class="mt-6 ml-4 mb-2 text-xl">{{ .Get 1 }}</h5>
             </div>
-            <p class="card-text mt-3">{{ .Get 2 }}</p>
+            <p class="mt-4">{{ .Get 2 }}</p>
+            <div class="block mt-4">
             {{ if .Get 3 }}
-            <a href="{{ .Get 3 }}" class="card-link text-dark"><i class="bi bi-github"></i></a>
+            <a href="{{ .Get 3 }}" class="text-2xl mr-2 duration-200 hover:opacity-50 card"><ion-icon name="logo-github" class="rounded-full bg-gray-100 p-2"></ion-icon></a>
             {{ end }}
             {{ if .Get 4 }}
-            <a href="{{ .Get 4 }}" class="card-link text-dark"><i class="bi bi-twitter"></i></a>
+            <a href="{{ .Get 4 }}" class="text-2xl duration-200 hover:opacity-50 card"><ion-icon name="logo-twitter" class="rounded-full bg-gray-100 p-2"></ion-icon></a>
             {{ end }}
+            </div>
         </div>
     </div>
 </div>
